@@ -4,12 +4,12 @@ from frappe.model.mapper import get_mapped_doc
 from frappe.utils import get_link_to_form
 import re
 
-def change_enquiry_status(doc, method):
-    duplicate_check(doc) 
-    if doc.custom_enquiry_status:
-        doc.status = doc.custom_enquiry_status
-    if not validate_mobile_number(doc.mobile_no):
-        frappe.throw("Invalid mobile number! Please enter a 10-digit number starting with 6, 7, 8, or 9, optionally prefixed by +91 or +91-.")
+# def change_enquiry_status(doc, method):
+#     duplicate_check(doc)
+#     if doc.custom_enquiry_status:
+#         doc.status = doc.custom_enquiry_status
+#     if not validate_mobile_number(doc.mobile_no):
+#         frappe.throw("Invalid mobile number! Please enter a 10-digit number starting with 6, 7, 8, or 9, optionally prefixed by +91 or +91-.")
 
 def set_enquiry_name(doc, method):
     if doc.name:
